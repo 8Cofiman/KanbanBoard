@@ -10,15 +10,15 @@ export default class Column {
 		this.elements = {};
 		this.elements.root = Column.createRoot();
 		this.elements.items = this.elements.root.querySelector(".kanban__column-items");
-		// this.elements.addItem = this.elements.root.querySelector(".kanban__add-item");
+		this.elements.addItem = this.elements.root.querySelector(".kanban__add-item");
 
 		this.elements.root.dataset.id = id;
 		this.elements.items.appendChild(topDropZone);
 
-		// this.elements.addItem.addEventListener("click", () => {
-		// 	const newItem = KanbanAPI.insertItem(id,"");
-		//  	this.renderItem(newItem);
-		// });
+		this.elements.addItem.addEventListener("click", () => {
+			const newItem = KanbanAPI.insertItem(id,"");
+		  	this.renderItem(newItem);
+		 });
 
 		KanbanAPI.getItems(id).forEach(item => {
 			this.renderItem(item);
