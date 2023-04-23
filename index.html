@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kaban</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="header">
+		<h1 class="header_title"> Канбан-доска (Органайзер ваших задач) </h1>
+		<p onclick="onClickInfo(this)" id="info" class="header_info"> i </p>
+
+		<div class="infoBlock" id="infoBlock">
+			<p onclick="onClickClose(this)" id="close" class="info_close"> x </p>
+			<h1 class="info_title">Горячие клавиши</h1>
+
+			<div class="info_hotkeys">
+				<div class="hotkey">
+					<p class="hotkey_text red_text">Удаление элемента:</p>
+					<p class="hotkey_key">dblclick</p>
+				</div>
+				<div class="hotkey">
+					<p class="hotkey_text">Перенос элемента</p>
+					<p class="hotkey_key">Drag&Drop</p>
+				</div>
+				<div class="hotkey">
+					<p class="hotkey_text"><b>Полужирное начертание текста</b></p>
+					<p class="hotkey_key">Ctrl+B</p>
+				</div>
+				<div class="hotkey">
+					<p class="hotkey_text"><i>Курсивное начертание текста</i></p>
+					<p class="hotkey_key">Ctrl+I</p>
+				</div>
+				<div class="hotkey">
+					<p class="hotkey_text"><u>Подчёркивание текста</u></p>
+					<p class="hotkey_key">Ctrl+U</p>
+				</div>
+			</div>
+			<div class="changeWallpaper">
+				<h2 class="changeWallpaper_Title"> Сменить обои</h2>
+				<img src="./img/cats.jpg" onclick="onClickChangeWallpaper1(main)" class="change_wallpaper_btn">
+				<img src="./img/sakura.jpg" onclick="onClickChangeWallpaper2(main)" class="change_wallpaper_btn">
+				<img src="./img/theme_1.jpg" onclick="onClickChangeWallpaper3(main)" class="change_wallpaper_btn">
+				<img src="./img/theme_2.jpg" onclick="onClickChangeWallpaper4(main)" class="change_wallpaper_btn">
+			</div>
+
+		</div>
+	</div>
+
+	<div id="main" class="main">
+		<div class="titles">
+			<div class="title"> Новое </div>
+			<div class="title"> Начато </div>
+			<div class="title"> В разработке </div>
+			<div class="title"> Завершено </div>
+		</div>
+
+		<div class="kanban">
+			<!-- <button class="kanban__add-item" type="button">+</button> -->
+		</div>
+	</div>
+
+	<div class="footer">
+		<p class="footer_text">
+			Автор: студент группы П -37</br>
+			<a class="footer_link" href="https://vk.com/cofiman" target="_blank"> Павел Христенко </a>
+		</p>
+		<div class="socials">
+			<a href="https://vk.com/cofiman" target="_blank"> <img class="soc_img" src="/img/vk.png" alt="#"> </a>
+			<a href="https://t.me/cofiman8" target="_blank"> <img class="soc_img" src="/img/telegram.png" alt="#"> </a>
+			<a href="https://steamcommunity.com/profiles/76561198184946571/" target="_blank"> <img class="soc_img"
+					src="/img/steam.png" alt="#"> </a>
+		</div>
+	</div>
+
+	<script src="js/main.js" type="module"></script>
+	<script>
+
+		function onClickInfo(info) {
+			infoBlock.style.display = 'block';
+		}
+
+		function onClickClose(info) {
+			infoBlock.style.display = 'none';
+		}
+
+		function onClickChangeWallpaper1(main) {
+			main.style.backgroundImage = 'url(./img/cats.jpg)';
+		}
+
+		function onClickChangeWallpaper2(main) {
+			main.style.backgroundImage = 'url(./img/sakura.jpg)';
+		}
+
+		function onClickChangeWallpaper3(main) {
+			main.style.backgroundImage = 'url(./img/theme_1.JPG)';
+		}
+
+		function onClickChangeWallpaper4(main) {
+			main.style.backgroundImage = 'url(./img/theme_2.JPG)';
+		}
+
+	</script>
+
+</body>
+
+</html>
