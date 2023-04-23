@@ -1,4 +1,4 @@
-import DropZone from "/DropZone.js";
+import DropZone from "./DropZone.js";
 import KanbanAPI from '../js/api/KanbanAPI.js'
 
 export default class Item {
